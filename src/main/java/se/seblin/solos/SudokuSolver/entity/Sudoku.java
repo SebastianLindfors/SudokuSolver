@@ -7,20 +7,46 @@ public class Sudoku {
 
   String horizontalLine = "";
 
+  int size;
+
   public Sudoku() {
 
     charSet = new char[] {'1','2','3','4','5','5','6','7','8','9'};
-    charGrid = new char[charSet.length][charSet.length];
+    size = charSet.length;
+
+    charGrid = new char[size][size];
 
     generateHorizontalLine();
 
+  }
+
+  public void updatePosition(int x, int y, char newCharacter) {
+
+    boolean newCharacterInSet = false;
+    for (char character:charSet) {
+      if (character == newCharacter) {
+        newCharacterInSet =true;
+        break;
+      }
+    }
+    if (!newCharacterInSet) {
+      throw new IllegalArgumentException("The character " + newCharacter + " is not part of the charSet for this sudoku.");
+    }
+
+    charGrid[x][y] = newCharacter;
+  }
+
+  //----- Getters -----//
+
+  public int getSize() {
+    return size;
   }
 
   public String toString() {
     StringBuilder outputString = new StringBuilder();
 
     outputString.append(this.horizontalLine);
-    for (int i = 0; i < charGrid.length; i++) {
+    for (int i = 0; i < size - 1; i++) {
       outputString.append(generateRowString(i))
           .append(horizontalLine);
     }
@@ -37,7 +63,7 @@ public class Sudoku {
 
   private String generateRowString(int rowNumber) {
     String outputString = "|";
-    for (int i = 0; i < charSet.length; i++) {
+    for (int i = 0; i < charSet.length - 1; i++) {
       outputString += charGrid[rowNumber][i] + "|";
     }
     outputString += "\n";

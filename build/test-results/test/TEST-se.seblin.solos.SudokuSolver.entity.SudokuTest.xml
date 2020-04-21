@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.seblin.solos.SudokuSolver.entity.SudokuTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-20T18:11:52" hostname="DESKTOP-UF6QME7" time="0.024">
+<testsuite name="se.seblin.solos.SudokuSolver.entity.SudokuTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-21T08:56:55" hostname="DESKTOP-UF6QME7" time="0.025">
   <properties/>
-  <testcase name="testToString()" classname="se.seblin.solos.SudokuSolver.entity.SudokuTest" time="0.024"/>
+  <testcase name="testToString()" classname="se.seblin.solos.SudokuSolver.entity.SudokuTest" time="0.025"/>
   <system-out><![CDATA[____________________
-|?|?|?|?|?|?|?|?|?|?|
+|1|2|3|4|5|6|7|8|9|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|2|3|4|5|6|7|8|9|1|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|3|4|5|6|7|8|9|1|2|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|4|5|6|7|8|9|1|2|3|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|5|6|7|8|9|1|2|3|4|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|6|7|8|9|1|2|3|4|5|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|7|8|9|1|2|3|4|5|6|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
+|8|9|1|2|3|4|5|6|7|
 ____________________
-|?|?|?|?|?|?|?|?|?|?|
-____________________
-|?|?|?|?|?|?|?|?|?|?|
+|9|1|2|3|4|5|6|7|8|
 ____________________
 
 ]]></system-out>
