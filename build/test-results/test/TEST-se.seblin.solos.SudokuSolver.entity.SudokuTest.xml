@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.seblin.solos.SudokuSolver.entity.SudokuTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-21T08:56:55" hostname="DESKTOP-UF6QME7" time="0.025">
+<testsuite name="se.seblin.solos.SudokuSolver.entity.SudokuTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-03T17:45:08" hostname="DESKTOP-UF6QME7" time="0.023">
   <properties/>
-  <testcase name="testToString()" classname="se.seblin.solos.SudokuSolver.entity.SudokuTest" time="0.025"/>
+  <testcase name="testToString()" classname="se.seblin.solos.SudokuSolver.entity.SudokuTest" time="0.023"/>
   <system-out><![CDATA[____________________
 |1|2|3|4|5|6|7|8|9|
 ____________________
