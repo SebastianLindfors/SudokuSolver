@@ -38,5 +38,13 @@ public class Cell {
     return foundValue;
   }
 
+  public void addConstraint(UniquenessConstraint constraint) {
+
+    if (!constraintsList.contains(constraint)) {
+      constraintsList.add(constraint);
+    }
+
+  }
+
 
 }
