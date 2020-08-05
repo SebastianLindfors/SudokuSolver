@@ -46,5 +46,19 @@ public class Cell {
 
   }
 
+  public char[] getAllowedValues() {
+
+    int i = 0;
+    char[][] allowedValues = new char[constraintsList.size()][];
+    for (UniquenessConstraint constraint:constraintsList) {
+      allowedValues[i] = constraint.getListOfAllowedValues();
+      i++;
+    }
+
+    //TODO Remove any char not in all allowedValues.
+
+
+  }
+
 
 }
