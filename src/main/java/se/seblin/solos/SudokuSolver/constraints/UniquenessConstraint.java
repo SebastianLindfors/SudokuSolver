@@ -24,4 +24,11 @@ public class UniquenessConstraint {
   public List<Cell> getBelongingCells() {
       return belongingCells;
   }
+
+  public char[] getListOfAllowedValues() {
+
+    //TODO Real code here
+    return new char[0];
+  }
+
 }
