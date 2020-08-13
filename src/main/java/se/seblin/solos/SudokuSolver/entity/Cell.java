@@ -55,6 +55,8 @@ public class Cell {
       i++;
     }
 
+    char[] verifiedValues = this.charSet.clone();
+
     //TODO Remove any char not in all allowedValues.
 
 
