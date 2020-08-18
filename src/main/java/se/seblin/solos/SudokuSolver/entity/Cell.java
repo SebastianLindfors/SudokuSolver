@@ -57,13 +57,14 @@ public class Cell {
 
     char[] verifiedValues = this.charSet.clone();
     for (char[] values: allowedValues) {
-      
+
     }
 
     //TODO Remove any char not in all allowedValues.
 
     return verifiedValues;
   }
+
 
 
 }
