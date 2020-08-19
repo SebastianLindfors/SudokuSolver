@@ -3,7 +3,9 @@ package se.seblin.solos.SudokuSolver.entity;
 import se.seblin.solos.SudokuSolver.constraints.UniquenessConstraint;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Cell {
 
@@ -46,7 +48,7 @@ public class Cell {
 
   }
 
-  public char[] getAllowedValues() {
+  public ArrayList<Character> getAllowedValues() { //TODO Test this method!
 
     int i = 0;
     char[][] allowedValues = new char[constraintsList.size()][];
@@ -55,13 +57,21 @@ public class Cell {
       i++;
     }
 
-    char[] verifiedValues = this.charSet.clone();
-    for (char[] values: allowedValues) {
 
+    Map<Character, Integer> timesOccured = new HashMap<>();
+    for (char[] values: allowedValues) {
+      for (char c:values) {
+        timesOccured.put(c,timesOccured.getOrDefault(c,0) + 1);
+      }
     }
 
-    //TODO Remove any char not in all allowedValues.
-
+    ArrayList<Character> verifiedValues = new ArrayList<>();
+    for (char key: timesOccured.keySet()) {
+      if (timesOccured.get(key) == allowedValues.length) {
+        verifiedValues.add(key);
+      }
+    }
+    
     return verifiedValues;
   }
 
