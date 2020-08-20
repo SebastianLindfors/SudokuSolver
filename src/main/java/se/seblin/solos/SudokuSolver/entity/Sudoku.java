@@ -3,7 +3,10 @@ package se.seblin.solos.SudokuSolver.entity;
 public class Sudoku {
 
   char[] charSet;
-  char[][] charGrid;
+
+  char[][] charGrid; // TODO Refactor out thi variable.
+
+  Cell[][] cellGrid;
 
   String horizontalLine = "";
 
@@ -15,6 +18,13 @@ public class Sudoku {
     size = charSet.length;
 
     charGrid = new char[size][size];
+
+    cellGrid = new Cell[size][size];
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        cellGrid[i][j] = new Cell(' ', this.charSet);
+      }
+    }
 
     generateHorizontalLine();
 
