@@ -9,6 +9,8 @@ import java.util.Map;
 
 public class Cell {
 
+  public boolean isEmpty;
+
   char[] charSet;
 
   char value;
@@ -23,8 +25,21 @@ public class Cell {
     }
 
     this.value = value;
+    this.isEmpty = false;
 
 
+  }
+
+  public Cell(char[] charSet) {
+
+    this.charSet = charSet;
+    
+    this.isEmpty = true;
+
+  }
+
+  private boolean isEmpty() {
+    return this.isEmpty;
   }
 
   public boolean verifyCharinCharSet(char testChar) {
