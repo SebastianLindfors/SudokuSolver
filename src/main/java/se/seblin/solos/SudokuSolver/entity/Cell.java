@@ -33,13 +33,19 @@ public class Cell {
   public Cell(char[] charSet) {
 
     this.charSet = charSet;
-    
+
     this.isEmpty = true;
 
   }
 
   private boolean isEmpty() {
     return this.isEmpty;
+  }
+
+  public void setEmpty(Boolean boolVal) {
+
+    this.isEmpty = boolVal;
+
   }
 
   public boolean verifyCharinCharSet(char testChar) {
