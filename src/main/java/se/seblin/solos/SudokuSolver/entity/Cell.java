@@ -13,6 +13,8 @@ public class Cell {
 
   char[] charSet;
 
+  final char emptyChar = '-';
+
   char value;
 
   List<UniquenessConstraint> constraintsList = new ArrayList<>();
@@ -94,6 +96,16 @@ public class Cell {
     }
     
     return verifiedValues;
+  }
+
+  public char getValue() {
+
+    if (this.isEmpty()) {
+      return emptyChar;
+    }
+    else {
+      return value;
+    }
   }
 
 
