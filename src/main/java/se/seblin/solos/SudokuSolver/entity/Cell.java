@@ -25,6 +25,9 @@ public class Cell {
     if (!verifyCharinCharSet(value)) {
       throw new IllegalArgumentException(value + "not in the provided charSet");
     }
+    if (!verifyCharinCharSet(emptyChar)) {
+      throw new IllegalArgumentException(value + "the empty marker may not be in the charSet.");
+    }
 
     this.value = value;
     this.isEmpty = false;
@@ -34,6 +37,9 @@ public class Cell {
 
   public Cell(char[] charSet) {
 
+    if (!verifyCharinCharSet(emptyChar)) {
+      throw new IllegalArgumentException(value + "the empty marker may not be in the charSet.");
+    }
     this.charSet = charSet;
 
     this.isEmpty = true;
