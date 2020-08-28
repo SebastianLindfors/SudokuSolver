@@ -104,6 +104,19 @@ public class Cell {
     return verifiedValues;
   }
 
+  public void setValue(char newValue) {
+
+    if (newValue == emptyChar) {
+      this.isEmpty = true;
+    }
+    else if (!verifyCharinCharSet(newValue)) {
+      throw new IllegalArgumentException(newValue + " is not in the charSet of this cell.");
+    }
+
+    this.value = newValue;
+
+  }
+
   public char getValue() {
 
     if (this.isEmpty()) {
