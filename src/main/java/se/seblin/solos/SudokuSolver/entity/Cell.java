@@ -114,6 +114,7 @@ public class Cell {
     }
 
     this.value = newValue;
+    this.updateConstraints();
 
   }
 
@@ -125,6 +126,10 @@ public class Cell {
     else {
       return value;
     }
+  }
+
+  public void updateConstraints() {
+    //TODO Add code here that updataes the constraints, this code should be run everytime the cell value changes
   }
 
 
