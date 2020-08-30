@@ -25,6 +25,10 @@ public class UniquenessConstraint {
       return belongingCells;
   }
 
+  public void update() {
+    //TODO Check all cells and update 
+  }
+
   public char[] getListOfAllowedValues() {
 
     //TODO Real code here

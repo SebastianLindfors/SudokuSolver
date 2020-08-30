@@ -129,7 +129,11 @@ public class Cell {
   }
 
   public void updateConstraints() {
+
     //TODO Add code here that updataes the constraints, this code should be run everytime the cell value changes
+    for (UniquenessConstraint constraint:constraintsList) {
+      constraint.update();
+    }
   }
 
 
