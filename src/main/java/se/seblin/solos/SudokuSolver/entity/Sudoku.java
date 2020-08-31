@@ -2,6 +2,8 @@ package se.seblin.solos.SudokuSolver.entity;
 
 public class Sudoku {
 
+  boolean valid = false;
+
   char[] charSet;
 
   char[][] charGrid; // TODO Refactor out thi variable.
@@ -50,6 +52,10 @@ public class Sudoku {
 
   public int getSize() {
     return size;
+  }
+
+  public boolean isValid() {
+    return this.valid;
   }
 
   public String toString() {
