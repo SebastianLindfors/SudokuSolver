@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.seblin.solos.SudokuSolver.entity.CellTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-02T21:44:21" hostname="DESKTOP-UF6QME7" time="0.026">
+<testsuite name="se.seblin.solos.SudokuSolver.entity.CellTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-09-02T22:42:07" hostname="DESKTOP-UF6QME7" time="0.029">
   <properties/>
-  <testcase name="testGetCharSet()" classname="se.seblin.solos.SudokuSolver.entity.CellTest" time="0.024"/>
+  <testcase name="testGetCharSet()" classname="se.seblin.solos.SudokuSolver.entity.CellTest" time="0.026"/>
   <testcase name="testSetValueGetValue()" classname="se.seblin.solos.SudokuSolver.entity.CellTest" time="0.001"/>
+  <testcase name="testIsEmpty()" classname="se.seblin.solos.SudokuSolver.entity.CellTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

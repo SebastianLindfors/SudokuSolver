@@ -51,7 +51,7 @@ public class Cell {
 
   // ----- Other Methods ----- //
 
-  private boolean isEmpty() {
+  public boolean isEmpty() {
     return this.isEmpty;
   }
 
@@ -112,7 +112,9 @@ public class Cell {
   public void setValue(char newValue) {
 
     if (newValue == emptyChar) {
+      this.value = newValue;
       this.isEmpty = true;
+      return;
     }
     else if (!verifyCharinCharSet(newValue)) {
       throw new IllegalArgumentException(newValue + " is not in the charSet of this cell.");
