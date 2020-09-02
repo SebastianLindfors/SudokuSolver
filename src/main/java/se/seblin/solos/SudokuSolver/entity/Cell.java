@@ -19,6 +19,8 @@ public class Cell {
 
   List<UniquenessConstraint> constraintsList = new ArrayList<>();
 
+  // ----- Constructors ----- //
+
   public Cell(char value, char[] charSet) {
 
     this.charSet = charSet;
@@ -37,14 +39,17 @@ public class Cell {
 
   public Cell(char[] charSet) {
 
-    if (!verifyCharinCharSet(emptyChar)) {
+    this.charSet = charSet;
+
+    if (verifyCharinCharSet(emptyChar)) {
       throw new IllegalArgumentException(value + "the empty marker may not be in the charSet.");
     }
-    this.charSet = charSet;
 
     this.isEmpty = true;
 
   }
+
+  // ----- Other Methods ----- //
 
   private boolean isEmpty() {
     return this.isEmpty;
@@ -126,6 +131,10 @@ public class Cell {
     else {
       return value;
     }
+  }
+
+  public char[] getCharSet() {
+    return this.charSet;
   }
 
   public void updateConstraints() {
