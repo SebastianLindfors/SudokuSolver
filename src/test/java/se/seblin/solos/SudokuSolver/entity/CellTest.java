@@ -15,4 +15,17 @@ class CellTest {
     assertEquals(charSet, testCell.getCharSet());
   }
 
+  @Test
+  public void testSetValueGetValue() {
+
+    char[] charSet = new char[] {'1','2','3'};
+    Cell testCell = new Cell(charSet);
+
+    char testChar = '1';
+    testCell.setValue(testChar);
+
+    assertEquals(testChar, testCell.getValue());
+
+  }
+
 }

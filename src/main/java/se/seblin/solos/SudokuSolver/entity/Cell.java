@@ -119,6 +119,8 @@ public class Cell {
     }
 
     this.value = newValue;
+    this.isEmpty = false;
+
     this.updateConstraints();
 
   }
