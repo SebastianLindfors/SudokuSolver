@@ -141,6 +141,8 @@ public class Cell {
     return this.charSet;
   }
 
+  public List<UniquenessConstraint> getConstraintsList() { return this.constraintsList; }
+
   public void updateConstraints() {
 
     //TODO Add code here that updataes the constraints, this code should be run everytime the cell value changes

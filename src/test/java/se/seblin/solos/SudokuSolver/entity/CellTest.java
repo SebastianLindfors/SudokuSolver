@@ -1,13 +1,17 @@
 package se.seblin.solos.SudokuSolver.entity;
 
 import org.junit.jupiter.api.Test;
+import se.seblin.solos.SudokuSolver.constraints.UniquenessConstraint;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CellTest {
 
   @Test
-  public void testGetCharSet() {
+  void testGetCharSet() {
 
     char[] charSet = new char[] {'1','2','3'};
     Cell testCell = new Cell(charSet);
@@ -16,7 +20,7 @@ class CellTest {
   }
 
   @Test
-  public void testSetValueGetValue() {
+  void testSetValueGetValue() {
 
     char[] charSet = new char[] {'1','2','3'};
     Cell testCell = new Cell(charSet);
@@ -29,7 +33,7 @@ class CellTest {
   }
 
   @Test
-  public void testIsEmpty() {
+  void testIsEmpty() {
 
     char[] charSet = new char[] {'1','2','3'};
     Cell testCell = new Cell(charSet);
@@ -46,6 +50,22 @@ class CellTest {
     testCell.setValue(emptyChar);
 
     assertEquals(true, testCell.isEmpty());
+
+  }
+
+  @Test
+  void testSetConstraintGetConstraint() {
+
+    char[] charSet = new char[] {'1','2','3'};
+    Cell testCell = new Cell(charSet);
+
+    UniquenessConstraint testConstraint = new UniquenessConstraint();
+    List<UniquenessConstraint> testList = new ArrayList<UniquenessConstraint>();
+    testList.add(testConstraint);
+
+    testCell.addConstraint(testConstraint);
+
+    assertEquals(testList, testCell.getConstraintsList());
 
   }
 
