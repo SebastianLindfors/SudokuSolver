@@ -69,4 +69,27 @@ class CellTest {
 
   }
 
+  @Test
+  void testVerifyCharinCharSetTRUE() {
+    char[] charSet = new char[] {'1','2','3'};
+    Cell testCell = new Cell(charSet);
+
+    char testChar = '1';
+
+    assertEquals(true, testCell.verifyCharinCharSet(testChar));
+
+  }
+
+  @Test
+  void testVerifyCharinCharSetFALSE() {
+
+    char[] charSet = new char[] {'1','2','3'};
+    Cell testCell = new Cell(charSet);
+
+    char testChar = '0';
+
+    assertEquals(false, testCell.verifyCharinCharSet(testChar));
+
+  }
+
 }
