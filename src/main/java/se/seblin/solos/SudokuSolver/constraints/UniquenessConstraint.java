@@ -14,6 +14,7 @@ public class UniquenessConstraint {
   public UniquenessConstraint(List<Cell> belongingCells) {
 
     this.belongingCells = belongingCells;
+    this.update();
 
   }
 

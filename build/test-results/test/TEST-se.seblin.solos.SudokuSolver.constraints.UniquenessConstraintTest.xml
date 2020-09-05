@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-05T22:17:08" hostname="DESKTOP-UF6QME7" time="0.024">
+  <properties/>
+  <testcase name="testAddCell()" classname="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
