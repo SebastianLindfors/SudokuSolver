@@ -21,7 +21,10 @@ class UniquenessConstraintTest {
     testList.add(testCell);
 
     assertEquals(testList, testConstraint.getBelongingCells());
-    
+
   }
+
+  @Test
+  void testUpdate
 
 }
