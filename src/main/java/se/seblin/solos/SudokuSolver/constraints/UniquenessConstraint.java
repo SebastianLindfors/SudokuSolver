@@ -11,24 +11,24 @@ public class UniquenessConstraint {
 
   private char[] charSet;
 
+
   private boolean violated;
 
   private List<Cell> belongingCells = new ArrayList<>();
+  private List<Character> allowedCharacters;
 
   private Map<Character, Integer> charCounts = new HashMap<>();
 
   public UniquenessConstraint(char[] charSet) {
 
     this.charSet = charSet;
-    this.setCharCountsToZero();
+    this.update();
 
   }
 
   public UniquenessConstraint(List<Cell> belongingCells, char[] charSet) {
 
     this.charSet = charSet;
-    this.setCharCountsToZero();
-
     this.belongingCells = belongingCells;
     this.update();
 
@@ -48,13 +48,30 @@ public class UniquenessConstraint {
   public void setViolated(boolean newValue) {this.violated = newValue; }
 
   public void update() {
-    //TODO Check all cells and update
+
+    this.setCharCountsToZero();
+    this.violated = false;
+
+    for (Cell belongingCell:belongingCells) {
+      charCounts.put(belongingCell.getValue(), charCounts.get(belongingCell.getValue()) + 1);
+      if (charCounts.get(belongingCell.getValue()) > 1) {
+        this.violated = true;
+      }
+    }
+
+    this.allowedCharacters = new ArrayList<>();
+    for (Character charSetChar:charSet) {
+      if (charCounts.get(charSetChar) == 0) {
+        this.allowedCharacters.add(charSetChar);
+      }
+    }
+
+
+
   }
 
-  public char[] getListOfAllowedValues() {
-
-    //TODO Real code here
-    return new char[0];
+  public List<Character> getListOfAllowedValues() {
+    return this.allowedCharacters;
   }
 
   // ----- Private Methods ----- //

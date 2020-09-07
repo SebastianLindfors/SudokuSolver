@@ -13,7 +13,7 @@ class UniquenessConstraintTest {
   @Test
   void testAddCell() {
 
-    UniquenessConstraint testConstraint = new UniquenessConstraint();
+    UniquenessConstraint testConstraint = new UniquenessConstraint(new char[] {1,2,3});
     Cell testCell = new Cell(new char[]{1,2,3});
     List<Cell> testList = new ArrayList<>();
 
@@ -25,6 +25,6 @@ class UniquenessConstraintTest {
   }
 
   @Test
-  void testUpdate
+  void testUpdate() {}
 
 }
