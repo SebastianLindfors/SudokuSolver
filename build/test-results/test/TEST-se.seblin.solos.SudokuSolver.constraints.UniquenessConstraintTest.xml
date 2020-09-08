@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-05T22:17:08" hostname="DESKTOP-UF6QME7" time="0.024">
+<testsuite name="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-09-08T10:02:44" hostname="DESKTOP-UF6QME7" time="0.038">
   <properties/>
-  <testcase name="testAddCell()" classname="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" time="0.024"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testAddCell()" classname="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" time="0.034"/>
+  <testcase name="testViolatedFalse()" classname="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" time="0.001"/>
+  <testcase name="testViolatedTrue()" classname="se.seblin.solos.SudokuSolver.constraints.UniquenessConstraintTest" time="0.001"/>
+  <system-out><![CDATA[Cell Value: -
+Cell Value: 1
+Cell Value: 1
+Cell Value: 2
+Cell Value: 1
+Cell Value: 1
+Cell Value: 1
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -25,6 +25,40 @@ class UniquenessConstraintTest {
   }
 
   @Test
-  void testUpdate() {}
+  void testViolatedTrue() {
+
+    UniquenessConstraint testConstraint = new UniquenessConstraint(new char[] {'1','2','3'});
+    Cell testCell1 = new Cell(new char[]{'1','2','3'});
+    Cell testCell2 = new Cell(new char[]{'1','2','3'});
+
+    Character testChar = '1';
+    testCell1.setValue(testChar);
+    testCell2.setValue(testChar);
+
+    testConstraint.addCell(testCell1);
+    testConstraint.addCell(testCell2);
+
+    assertEquals(true, testConstraint.isViolated());
+
+  }
+
+  @Test
+  void testViolatedFalse() {
+
+    UniquenessConstraint testConstraint = new UniquenessConstraint(new char[] {'1','2','3'});
+    Cell testCell1 = new Cell(new char[]{'1','2','3'});
+    Cell testCell2 = new Cell(new char[]{'1','2','3'});
+
+    Character testChar1 = '1';
+    Character testChar2 = '2';
+    testCell1.setValue(testChar1);
+    testCell2.setValue(testChar2);
+
+    testConstraint.addCell(testCell1);
+    testConstraint.addCell(testCell2);
+
+    assertEquals(false, testConstraint.isViolated());
+
+  }
 
 }

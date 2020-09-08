@@ -59,7 +59,7 @@ class CellTest {
     char[] charSet = new char[] {'1','2','3'};
     Cell testCell = new Cell(charSet);
 
-    UniquenessConstraint testConstraint = new UniquenessConstraint();
+    UniquenessConstraint testConstraint = new UniquenessConstraint(new char[]{1,2,3});
     List<UniquenessConstraint> testList = new ArrayList<UniquenessConstraint>();
     testList.add(testConstraint);
 

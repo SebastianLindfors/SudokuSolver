@@ -84,24 +84,22 @@ public class Cell {
 
   public ArrayList<Character> getAllowedValues() { //TODO Test this method!
 
-    int i = 0;
-    char[][] allowedValues = new char[constraintsList.size()][];
+    List<List<Character>> allowedValues = new ArrayList<>();
     for (UniquenessConstraint constraint:constraintsList) {
-      allowedValues[i] = constraint.getListOfAllowedValues();
-      i++;
+      allowedValues.add(constraint.getListOfAllowedValues());
     }
 
 
     Map<Character, Integer> timesOccured = new HashMap<>();
-    for (char[] values: allowedValues) {
-      for (char c:values) {
-        timesOccured.put(c,timesOccured.getOrDefault(c,0) + 1);
+    for (List<Character> listOfCharacters: allowedValues) {
+      for (Character character:listOfCharacters) {
+        timesOccured.put(character,timesOccured.getOrDefault(character,0) + 1);
       }
     }
 
     ArrayList<Character> verifiedValues = new ArrayList<>();
     for (char key: timesOccured.keySet()) {
-      if (timesOccured.get(key) == allowedValues.length) {
+      if (timesOccured.get(key) == allowedValues.size()) {
         verifiedValues.add(key);
       }
     }

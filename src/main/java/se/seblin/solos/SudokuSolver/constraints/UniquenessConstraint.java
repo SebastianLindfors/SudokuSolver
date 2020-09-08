@@ -53,6 +53,10 @@ public class UniquenessConstraint {
     this.violated = false;
 
     for (Cell belongingCell:belongingCells) {
+     //System.out.println("Cell Value: " + belongingCell.getValue()); //DEBUGGING LINE
+      if (belongingCell.isEmpty) {
+        continue;
+      }
       charCounts.put(belongingCell.getValue(), charCounts.get(belongingCell.getValue()) + 1);
       if (charCounts.get(belongingCell.getValue()) > 1) {
         this.violated = true;
