@@ -1,5 +1,10 @@
 package se.seblin.solos.SudokuSolver.entity;
 
+import se.seblin.solos.SudokuSolver.constraints.UniquenessConstraint;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sudoku {
 
   boolean valid = false;
@@ -9,6 +14,8 @@ public class Sudoku {
   char[][] charGrid; // TODO Refactor out thi variable.
 
   Cell[][] cellGrid;
+
+  List<UniquenessConstraint> listOfConstraints = new ArrayList<>();
 
   String horizontalLine = "";
 
@@ -70,6 +77,12 @@ public class Sudoku {
     return outputString.toString();
   }
 
+  public void addConstraints(UniquenessConstraint newConstraint) {
+    if (!listOfConstraints.contains(newConstraint)) {
+      this.listOfConstraints.add(newConstraint);
+    }
+  }
+
   private void generateHorizontalLine() {
     for (int i = 0; i < charSet.length; i++) {
       this.horizontalLine += "__";
@@ -85,6 +98,10 @@ public class Sudoku {
     outputString += "\n";
 
     return outputString;
+  }
+
+  private void checkIfConstraintsAreViolated() {
+    //TODO Check all constraint
   }
 
 }
