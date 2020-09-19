@@ -100,8 +100,14 @@ public class Sudoku {
     return outputString;
   }
 
-  private void checkIfConstraintsAreViolated() {
-    //TODO Check all constraint
+  private boolean checkIfConstraintsAreViolated() {
+    for (UniquenessConstraint constraint : listOfConstraints) {
+      if (constraint.isViolated()) {
+        return true;
+      }
+    }
+    return false;
+    
   }
 
 }
