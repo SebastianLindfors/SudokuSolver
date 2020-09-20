@@ -107,7 +107,16 @@ public class Sudoku {
       }
     }
     return false;
-    
+  }
+
+  private List<UniquenessConstraint> getViolatedCosntraints() {
+    List<UniquenessConstraint> violatedConstraints = new ArrayList<>();
+    for (UniquenessConstraint constraint : listOfConstraints) {
+      if (constraint.isViolated()) {
+        violatedConstraints.add(constraint);
+      }
+    }
+    return violatedConstraints;
   }
 
 }
