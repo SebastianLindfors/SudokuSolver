@@ -119,4 +119,14 @@ public class Sudoku {
     return violatedConstraints;
   }
 
+  private List<UniquenessConstraint> getNonViolatedConstraints() {
+    List<UniquenessConstraint> nonViolatedConstraints = new ArrayList<>();
+    for (UniquenessConstraint constraint : listOfConstraints) {
+      if (!constraint.isViolated()) {
+        nonViolatedConstraints.add(constraint);
+      }
+    }
+    return nonViolatedConstraints;
+  }
+
 }
