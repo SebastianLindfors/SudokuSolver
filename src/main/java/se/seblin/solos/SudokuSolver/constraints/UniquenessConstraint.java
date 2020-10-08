@@ -9,11 +9,10 @@ import java.util.Map;
 
 public class UniquenessConstraint {
 
-  private char[] charSet;
-
-
   private boolean violated;
 
+  private char[] charSet;
+  
   private List<Cell> belongingCells = new ArrayList<>();
   private List<Character> allowedCharacters;
 
