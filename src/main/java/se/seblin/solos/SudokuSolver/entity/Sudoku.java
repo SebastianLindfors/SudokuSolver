@@ -100,7 +100,7 @@ public class Sudoku {
     return outputString;
   }
 
-  private boolean checkIfConstraintsAreViolated() {
+  private boolean checkIfAnyConstraintsAreViolated() {
     for (UniquenessConstraint constraint : listOfConstraints) {
       if (constraint.isViolated()) {
         return true;
