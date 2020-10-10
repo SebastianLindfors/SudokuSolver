@@ -109,7 +109,7 @@ public class Sudoku {
     return false;
   }
 
-  private List<UniquenessConstraint> getViolatedCosntraints() {
+  private List<UniquenessConstraint> getViolatedConstraints() {
     List<UniquenessConstraint> violatedConstraints = new ArrayList<>();
     for (UniquenessConstraint constraint : listOfConstraints) {
       if (constraint.isViolated()) {
