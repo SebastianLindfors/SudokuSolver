@@ -61,4 +61,26 @@ class UniquenessConstraintTest {
 
   }
 
+  @Test
+  void testAllowedValues() {
+
+    UniquenessConstraint testConstraint = new UniquenessConstraint(new char[] {'1','2','3'});
+    Cell testCell1 = new Cell(new char[]{'1','2','3'});
+    Cell testCell2 = new Cell(new char[]{'1','2','3'});
+
+    Character testChar1 = '1';
+    Character testChar2 = '2';
+    testCell1.setValue(testChar1);
+    testCell2.setValue(testChar2);
+
+    testConstraint.addCell(testCell1);
+    testConstraint.addCell(testCell2);
+
+    List<Character> expected = new ArrayList<>();
+    expected.add('3');
+
+    assertEquals(expected, testConstraint.getListOfAllowedValues());
+
+  }
+
 }
