@@ -90,16 +90,16 @@ public class Cell {
     }
 
 
-    Map<Character, Integer> timesOccured = new HashMap<>();
+    Map<Character, Integer> timesOccurred = new HashMap<>();
     for (List<Character> listOfCharacters: allowedValues) {
       for (Character character:listOfCharacters) {
-        timesOccured.put(character,timesOccured.getOrDefault(character,0) + 1);
+        timesOccurred.put(character,timesOccurred.getOrDefault(character,0) + 1);
       }
     }
 
     ArrayList<Character> verifiedValues = new ArrayList<>();
-    for (char key: timesOccured.keySet()) {
-      if (timesOccured.get(key) == allowedValues.size()) {
+    for (char key: timesOccurred.keySet()) {
+      if (timesOccurred.get(key) == allowedValues.size()) {
         verifiedValues.add(key);
       }
     }
