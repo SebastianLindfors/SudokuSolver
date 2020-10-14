@@ -83,6 +83,15 @@ public class Sudoku {
     }
   }
 
+  public void removeConstraints(UniquenessConstraint constraint) {
+    if (listOfConstraints.contains(constraint)) {
+      this.listOfConstraints.remove(constraint);
+    }
+    else {
+      throw new IllegalArgumentException("Could not remove constraint: Not in sudoku constraint list");
+    }
+  }
+
   private void generateHorizontalLine() {
     for (int i = 0; i < charSet.length; i++) {
       this.horizontalLine += "__";
