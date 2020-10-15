@@ -52,7 +52,6 @@ public class Sudoku {
       throw new IllegalArgumentException("The character " + newCharacter + " is not part of the charSet for this sudoku.");
     }
     cellGrid[x][y].setValue(newCharacter);
-    charGrid[x][y] = newCharacter;
   }
 
   //----- Getters -----//
