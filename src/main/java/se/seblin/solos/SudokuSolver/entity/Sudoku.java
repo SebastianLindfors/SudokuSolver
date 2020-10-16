@@ -64,18 +64,6 @@ public class Sudoku {
     return this.valid;
   }
 
-  public String toString() {
-    StringBuilder outputString = new StringBuilder();
-
-    outputString.append(this.horizontalLine);
-    for (int i = 0; i < size - 1; i++) {
-      outputString.append(generateRowString(i))
-          .append(horizontalLine);
-    }
-
-    return outputString.toString();
-  }
-
   public void addConstraints(UniquenessConstraint newConstraint) {
     if (!listOfConstraints.contains(newConstraint)) {
       this.listOfConstraints.add(newConstraint);
@@ -96,16 +84,6 @@ public class Sudoku {
       this.horizontalLine += "__";
     }
     this.horizontalLine += "\n";
-  }
-
-  private String generateRowString(int rowNumber) {
-    String outputString = "|";
-    for (int i = 0; i < charSet.length - 1; i++) {
-      outputString += charGrid[rowNumber][i] + "|";
-    }
-    outputString += "\n";
-
-    return outputString;
   }
 
   private boolean checkIfAnyConstraintsAreViolated() {
