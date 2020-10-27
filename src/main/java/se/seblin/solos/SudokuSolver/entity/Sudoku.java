@@ -11,8 +11,6 @@ public class Sudoku {
 
   char[] charSet;
 
-  char[][] charGrid; // TODO Refactor out thi variable.
-
   Cell[][] cellGrid;
 
   List<UniquenessConstraint> listOfConstraints = new ArrayList<>();
@@ -25,8 +23,6 @@ public class Sudoku {
 
     charSet = new char[] {'1','2','3','4','5','5','6','7','8','9'};
     size = charSet.length;
-
-    charGrid = new char[size][size];
 
     cellGrid = new Cell[size][size];
     for (int i = 0; i < size; i++) {
