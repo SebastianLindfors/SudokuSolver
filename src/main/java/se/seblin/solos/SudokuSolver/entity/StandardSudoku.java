@@ -7,16 +7,17 @@ import java.util.Map;
 
 public class StandardSudoku extends Sudoku {
 
+  private Map<Integer, UniquenessConstraint> rowConstraints = new HashMap();
+  private Map<Integer, UniquenessConstraint> columnConstraints = new HashMap();
+  private Map<Integer, UniquenessConstraint> squareConstraints = new HashMap();
+
   public StandardSudoku() {
 
     charSet = new char[] {'1','2','3','4','5','5','6','7','8','9'};
     size = charSet.length;
 
-    Map<Integer, UniquenessConstraint> rowConstraints = new HashMap();
-    Map<Integer, UniquenessConstraint> columnConstraints = new HashMap();
-    Map<Integer, UniquenessConstraint> squareConstraints = new HashMap();
-
     cellGrid = new Cell[size][size];
+
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         Cell newCell = new Cell(this.charSet);
