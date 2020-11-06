@@ -19,12 +19,26 @@ public class StandardSudoku extends Sudoku {
     cellGrid = new Cell[size][size];
 
     for (int i = 0; i < size; i++) {
+      UniquenessConstraint rowConstraint = new UniquenessConstraint(charSet);
+      UniquenessConstraint columnConstraint = new UniquenessConstraint(charSet);
+      UniquenessConstraint squareConstraint = new UniquenessConstraint(charSet);
+
+      listOfConstraints.add(rowConstraint);
+      listOfConstraints.add(columnConstraint);
+      listOfConstraints.add(squareConstraint);
+
+      rowConstraints.put(i, rowConstraint);
+      rowConstraints.put(i, columnConstraint);
+      rowConstraints.put(i, squareConstraint);
+    }
+
+    for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         Cell newCell = new Cell(this.charSet);
         Integer currentSquare = i/3 + j/3;
 
         rowConstraints.get(i).addCell(newCell);
-        columnConstraints.get(i).addCell(newCell);
+        columnConstraints.get(j).addCell(newCell);
         squareConstraints.get(currentSquare).addCell(newCell);
 
         cellGrid[i][j] = newCell;
