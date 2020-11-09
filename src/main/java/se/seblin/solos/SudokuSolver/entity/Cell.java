@@ -11,7 +11,7 @@ public class Cell {
 
   public boolean isEmpty;
 
-  char[] charSet;
+  final char[] charSet;
 
   final char emptyChar = '-';
 

@@ -9,7 +9,7 @@ public class Sudoku {
 
   boolean valid = false;
 
-  char[] charSet;
+  private char[] charSet;
 
   Cell[][] cellGrid;
 

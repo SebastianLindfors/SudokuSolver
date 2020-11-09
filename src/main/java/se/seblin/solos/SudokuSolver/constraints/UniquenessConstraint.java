@@ -11,7 +11,7 @@ public class UniquenessConstraint {
 
   private boolean violated;
 
-  private char[] charSet;
+  private final char[] charSet;
   
   private List<Cell> belongingCells = new ArrayList<>();
   private List<Character> allowedCharacters;
